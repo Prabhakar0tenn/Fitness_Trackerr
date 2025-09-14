@@ -1,0 +1,123 @@
+/* public/styles/dashboard.css */
+
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: #3a3a3a;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Glass Morphism Effects */
+.glass-card {
+    background: rgba(255, 255, 255, 0.12) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.18) !important;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15) !important;
+    border-radius: 15px !important;
+}
+
+/* Buttons */
+.glass-btn {
+    background: rgba(0, 123, 255, 0.75) !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    color: white !important;
+    backdrop-filter: blur(5px) !important;
+    transition: all 0.25s ease !important;
+}
+
+.glass-btn:hover {
+    transform: translateY(-3px);
+}
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+    background: rgba(0, 0, 0, 0.6) !important;
+    backdrop-filter: blur(8px);
+}
+
+/* Spirit Cards */
+.spirit-card {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+    height: 100%;
+    border: none !important;
+    border-radius: 12px !important;
+}
+
+.spirit-card img {
+    height: 180px;
+    object-fit: cover;
+}
+
+/* Calendar */
+.calendar-container {
+    padding: 10px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #080808;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+}
+
+/* weekday header */
+.calendar-day-header {
+    text-align: center;
+    font-weight: 700;
+    padding: 6px;
+    color: #bebebe;
+}
+
+/* day cell */
+.calendar-day {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.06);
+    color: #000000;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.15s, background 0.15s;
+}
+
+.calendar-day:hover {
+    transform: translateY(-4px);
+    background: rgba(255,255,255,0.12);
+}
+
+.calendar-day.today {
+    border: 2px solid #3a3a3a;
+}
+
+.calendar-day.completed {
+    background: linear-gradient(90deg, #00c853, #00e676);
+    color: #fff;
+    box-shadow: 0 6px 18px rgba(0,200,83,0.18);
+}
+
+/* progress bar */
+.progress-bar {
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    font-weight: bold;
+    color: #fff;
+}
+
+/* modal list items */
+#modalExerciseList .list-group-item {
+    background: rgba(255,255,255,0.06);
+    border: none;
+    color: #fff;
+}
